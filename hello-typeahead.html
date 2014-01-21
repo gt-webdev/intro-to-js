@@ -7,7 +7,8 @@
                 "Coc is awesome",
                 "Hummus", "GT" ];
             function complete(event) {
-                if(this.value) {
+                console.log("GOT ONE");
+                if(this.value && !event.ctrlKey) {
                   var text = this.value.toLowerCase();
                   for(var i = 0; i < autocompleteWords.length; i++) {
                      if(autocompleteWords[i].toLowerCase().indexOf(text) === 0) {
