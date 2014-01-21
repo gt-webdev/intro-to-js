@@ -2,9 +2,15 @@
     <head>
         <script>
             var i = 0;
+
+            function randomColor() {
+                return '#'+Math.floor(Math.random()*16777215).toString(16);
+            }
             function clickButton() {
                 i += 1;
-                alert("You clicked the button " + i + " times !");
+                console.log("You clicked the button " + i + " times !");
+                document.body.children[0].innerHTML = "Clicked " + i + " times.";
+                document.body.children[0].style.color = randomColor();
             }
         </script>
     </head>
