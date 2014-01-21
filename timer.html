@@ -1,21 +1,22 @@
 <html>
-    <script>
-    var images = ["gt-webdev.png", "doge.jpeg", "php-hammer.jpg"]
-    function changePicture() {
-        var nextImage = Math.floor(Math.random() * images.length);
-        console.log("Setting image to", nextImage);
-        document.body.style["background-image"] = "url(images/" + images[nextImage] + ")"; 
-    }
-    
-    window.onload = function() {
-      changePicture();
-      setInterval(changePicture, 3000);
-    }
+    <head>
+        <script>
+        var images = ["gt-webdev.png", "doge.jpeg", "php-hammer.jpg", "sanic.jpg"];
+        function changePicture() {
+            var nextImage = Math.floor(Math.random() * images.length);
+            console.log("Setting image to", nextImage);
+            document.body.style["background-image"] = "url(images/" + images[nextImage] + ")"; 
+        }
+        
+        window.onload = function() {
+          changePicture();
+          setInterval(changePicture, 3000);
+        }
 
-    </script>
+        </script>
+    </head>
 
     <body>
-        <h1>Pictures, Pictures Everywhere</h1>
-    <body>
+    </body>
 
 </html>
