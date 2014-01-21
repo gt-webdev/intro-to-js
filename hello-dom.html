@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script>
+            function makeTrendyJSLibs() {
+                console.log(document.body);
+                var div = document.body.children[0];
+                var ul = div.children[1];
+                var els = ul.children;
+                console.log(els);
+                for(var i = 0; i < els.length; i++) {
+                    els[i].innerHTML = els[i].innerHTML + "<b>.js<b>";
+                }
+            }
+            
+            window.onload = makeTrendyJSLibs;
+        </script>
+
+    </head>
+
+    <body>
+        <div>
+          <p>What's for dinner?</p>
+          <ul>
+             <li>Ham</li>
+             <li>Hummus</li>
+             <li>Habenero Peppers</li>
+          </ul>
+
+        </div>
+
+    </body>
+</html>

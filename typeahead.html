@@ -1,0 +1,35 @@
+<html>
+
+    <head>
+        <script>
+            var autocompleteWords = [ 
+                "Tomer", "To be or not to be", "Coc is the best",
+                "Coc is awesome",
+                "Hummus", "GT" ];
+            function complete(event) {
+                if(this.value) {
+                  var text = this.value.toLowerCase();
+                  for(var i = 0; i < autocompleteWords.length; i++) {
+                     if(autocompleteWords[i].toLowerCase().indexOf(text) === 0) {
+                        this.value = autocompleteWords[i];
+                        this.setSelectionRange(text.length, autocompleteWords[i].length);
+                        break;
+                     }
+                  }
+                }
+            }
+            window.onload = function() { // anonymous function
+                var inputBox = document.getElementById("typeahead");
+                inputBox.onkeyup = complete;
+            }
+
+        </script>
+
+    </head>
+    
+    <body>
+        <h1>Autocomplete typeahead</h1>
+        <input type="text" id="typeahead" placeholder="Type Here"></input>
+    </body>
+
+</html>
